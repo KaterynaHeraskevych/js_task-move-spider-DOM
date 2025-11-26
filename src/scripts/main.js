@@ -17,7 +17,7 @@ document.addEventListener('click', (e) => {
     let vertShift = coordY - wallRect.top - wallBorder - spiderSize / 2;
     let horizShift = coordX - wallRect.left - wallBorder - spiderSize / 2;
 
-    if (vertShift < spiderSize) {
+    if (vertShift < 0) {
       vertShift = 0;
     }
 
@@ -25,7 +25,7 @@ document.addEventListener('click', (e) => {
       vertShift = wall.clientHeight - spiderSize;
     }
 
-    if (horizShift < spiderSize) {
+    if (horizShift < 0) {
       horizShift = 0;
     }
 
